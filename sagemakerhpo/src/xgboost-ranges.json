@@ -1,0 +1,42 @@
+{
+  "StaticHyperParameters": {
+      "eval_metric": "auc",
+      "objective": "binary:logistic"
+  },
+  "ContinuousParameterRanges": [
+    {
+      "Type": "Continuous",
+      "Name": "eta",
+      "MinValue": "0.001",
+      "MaxValue": "0.2"
+    },
+    {
+      "Type": "Continuous",
+      "Name": "gamma",
+      "MinValue": "0.1",
+      "MaxValue": "20"
+    },
+    {
+      "Type": "Continuous",
+      "Name": "min_child_weight",
+      "MinValue": "1",
+      "MaxValue": "30"
+    }
+  ],
+  "CategoricalParameterRanges": [
+  ],
+  "IntegerParameterRanges": [
+    {
+      "Type": "Integer",
+      "MinValue": "3",
+      "Name": "max_depth",
+      "MaxValue": "30"
+    },
+    {
+      "Type": "Integer",
+      "MinValue": "50",
+      "Name": "num_round",
+      "MaxValue": "1000"
+    }
+  ]
+}

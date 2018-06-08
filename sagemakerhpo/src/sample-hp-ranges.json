@@ -1,0 +1,32 @@
+{
+    "CategoricalParameterRanges": [
+    ],
+    "ContinuousParameterRanges": [
+        {
+          "MinValue": "0.00001",
+          "Type": "Continuous",
+          "Name": "learning_rate",
+          "MaxValue": "0.001" 
+        },
+        {
+          "MinValue": "0",
+          "Type": "Continuous",
+          "Name": "dropout",
+          "MaxValue": "0.7" 
+        }
+    ],
+    "IntegerParameterRanges": [
+        {
+          "Type": "Integer",
+          "Name": "num_input_layers",
+          "MinValue": "1",
+          "MaxValue": "4"
+        },
+        {
+          "Type": "Integer",
+          "Name": "encoder_dim",
+          "MinValue": "50",
+          "MaxValue": "400"
+        }
+    ]
+}

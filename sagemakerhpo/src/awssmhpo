@@ -1,0 +1,10 @@
+#!/bin/bash
+# Simple helper script to use AWS CLI tools with SMHPO
+
+# Tell the script to abort if any command fails.
+set -e
+
+DEFAULT_ENDPOINT_URL=https://zj0jmkp64g.execute-api.us-west-2.amazonaws.com/Prod
+ENDPOINT_URL=${SMHPO_ENDPOINT_URL-${DEFAULT_ENDPOINT_URL}}
+AWS_ACCOUNT_ID=`aws sts get-caller-identity --output text --query Account`
+aws sagemakerhpo --endpoint-url ${ENDPOINT_URL} $@ --aws-account-id ${AWS_ACCOUNT_ID}
